@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+
+<BorderPane fx:id="root"
+            xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.casino_final.HelloController"
+            style="-fx-background-color: white;">
+
+    <top>
+        <Label text="CASINO GAME"
+               style="-fx-text-fill: #333333; -fx-font-size: 28px; -fx-padding: 15;"
+               BorderPane.alignment="CENTER"/>
+    </top>
+
+    <center>
+        <HBox spacing="30" alignment="CENTER">
+            <ImageView fx:id="bag1" fitWidth="120" fitHeight="120"/>
+            <ImageView fx:id="bag2" fitWidth="120" fitHeight="120"/>
+            <ImageView fx:id="bag3" fitWidth="120" fitHeight="120"/>
+        </HBox>
+    </center>
+
+    <bottom>
+        <VBox spacing="10" alignment="CENTER" style="-fx-padding: 15;">
+            <Label fx:id="infoLabel"
+                   text="Бросьте монетку для начала"
+                   style="-fx-text-fill: #444444; -fx-font-size: 14px;"/>
+
+            <HBox spacing="15" alignment="CENTER">
+                <Button text="Бросить монету" onAction="#onPay"/>
+                <Button text="Старт" onAction="#onStart"/>
+            </HBox>
+        </VBox>
+    </bottom>
+
+</BorderPane>
